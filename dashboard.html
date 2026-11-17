@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Dashboard | Stackly Academy</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="dashboard-page" class="bg-[#fbfcfa] text-slate-800 antialiased font-sans pb-20">
+
+  <!-- ==================== TOP EMAIL BANNER BAR ==================== -->
+  <section class="bg-[#006747] text-white py-3.5 px-4 sm:px-6 lg:px-8 border-b border-[#005238] shadow-sm">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+      
+      <div class="flex items-center gap-3">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-300 animate-pulse"></span>
+        <div class="flex items-center gap-2">
+          <span class="text-xs uppercase tracking-wider text-emerald-200 font-bold">
+            Logged in Account:
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 backdrop-blur-xs text-xs font-mono font-bold text-white border border-white/30 shadow-xs">
+            <i data-lucide="mail" class="w-3.5 h-3.5 text-emerald-300"></i>
+            <span id="dash-top-email">eleanor.miller@family.com</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3 text-xs">
+        <span class="hidden md:inline text-emerald-200">
+          Role: <strong id="dash-role-badge" class="text-white capitalize">Verified Guardian</strong>
+        </span>
+        <button id="dash-signout-btn" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-rose-600 text-white font-bold transition text-xs border border-white/20 cursor-pointer">
+          <i data-lucide="log-out" class="w-3.5 h-3.5"></i>
+          <span>Sign Out</span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== MAIN DASHBOARD CONTAINER ==================== -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 space-y-8">
+    
+    <!-- Student Header Card -->
+    <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-2xs flex flex-col md:flex-row md:items-center justify-between gap-6">
+      <div class="flex items-center gap-5">
+        <div class="w-20 h-20 rounded-3xl overflow-hidden border-3 border-[#006747] shadow-md shrink-0">
+          <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=300&q=80" alt="Child Avatar" class="w-full h-full object-cover">
+        </div>
+        <div class="space-y-1">
+          <div class="flex flex-wrap items-center gap-2">
+            <h1 class="text-2xl sm:text-3xl font-black text-slate-900 font-display">Leo Miller</h1>
+            <span class="px-3 py-0.5 rounded-full bg-[#e6f4ea] text-[#137333] text-xs font-bold border border-[#ceead6]">Pre-K STEAM Classroom</span>
+          </div>
+          <p class="text-xs text-slate-500">
+            Lead Educator: <strong>Ms. Sarah Jenkins, M.Ed.</strong> • Room: <strong>Meadowlark Nature Room (Bldg B)</strong>
+          </p>
+          <div class="flex items-center gap-2 text-xs text-slate-500 pt-1">
+            <span>Account Email: <strong id="dash-card-email" class="text-[#006747] font-mono">eleanor.miller@family.com</strong></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row sm:items-center gap-3">
+        <div class="bg-[#f0fdf4] p-3 rounded-2xl border border-emerald-200 text-xs text-emerald-800 space-y-1">
+          <div class="font-bold flex items-center gap-1.5 text-[#006747]">
+            <i data-lucide="check" class="w-4 h-4 text-[#006747]"></i>
+            <span>Today's Check-in: 8:15 AM</span>
+          </div>
+          <div class="text-[11px] text-slate-500">Authorized Pickup: Eleanor Miller, David Miller</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <div class="flex items-center gap-2 border-b border-slate-200 pb-3 text-xs font-bold overflow-x-auto">
+      <button data-tab="overview" class="dash-tab-btn px-4 py-2 rounded-full transition cursor-pointer bg-[#006747] text-white shadow-2xs font-bold">
+        Daily Overview
+      </button>
+      <button data-tab="messages" class="dash-tab-btn px-4 py-2 rounded-full transition cursor-pointer text-slate-600 hover:bg-slate-100 font-bold">
+        Teacher Chat (1 Unread)
+      </button>
+      <button data-tab="photos" class="dash-tab-btn px-4 py-2 rounded-full transition cursor-pointer text-slate-600 hover:bg-slate-100 font-bold">
+        Classroom Photos (12)
+      </button>
+      <button data-tab="billing" class="dash-tab-btn px-4 py-2 rounded-full transition cursor-pointer text-slate-600 hover:bg-slate-100 font-bold">
+        Tuition & Receipts
+      </button>
+    </div>
+
+    <!-- 4 Metric KPI Cards -->
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="bg-white p-5 rounded-3xl border border-slate-200 shadow-2xs">
+        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-1">Today's Nutrition</span>
+        <span class="text-2xl font-black text-[#006747] font-display">100% Lunch</span>
+        <p class="text-[11px] text-slate-500 mt-0.5">Organic chicken pasta & carrots</p>
+      </div>
+
+      <div class="bg-white p-5 rounded-3xl border border-slate-200 shadow-2xs">
+        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-1">Curriculum Focus</span>
+        <span class="text-2xl font-black text-amber-600 font-display">STEAM Physics</span>
+        <p class="text-[11px] text-slate-500 mt-0.5">Waterwheel run & twig building</p>
+      </div>
+
+      <div class="bg-white p-5 rounded-3xl border border-slate-200 shadow-2xs">
+        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-1">Nap Sanctuary</span>
+        <span class="text-2xl font-black text-sky-600 font-display">1h 45m</span>
+        <p class="text-[11px] text-slate-500 mt-0.5">Rested peacefully in sanctuary</p>
+      </div>
+
+      <div class="bg-white p-5 rounded-3xl border border-slate-200 shadow-2xs">
+        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-1">Tuition Status</span>
+        <span class="text-2xl font-black text-emerald-600 font-display">Paid (Oct)</span>
+        <p class="text-[11px] text-slate-500 mt-0.5">Next billing date: Nov 1, 2026</p>
+      </div>
+    </div>
+
+    <!-- TAB 1: OVERVIEW -->
+    <div id="tab-overview" class="dash-tab-panel grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <div class="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-2xs space-y-6">
+        <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+          <div>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-[#006747]">Real-Time Timeline</span>
+            <h3 class="text-xl font-bold text-slate-900 font-display">Today's Classroom Stream</h3>
+          </div>
+          <span class="text-xs text-slate-500 font-semibold">Today • 4 Updates</span>
+        </div>
+
+        <div class="space-y-4">
+          <div class="flex items-start gap-3 p-4 bg-[#fbfcfa] rounded-2xl border border-slate-100 text-xs">
+            <span class="text-2xl">🍲</span>
+            <div class="space-y-1 w-full">
+              <div class="flex justify-between font-bold">
+                <span class="text-slate-900">Family-Style Lunch</span>
+                <span class="text-slate-400 font-mono">11:40 AM</span>
+              </div>
+              <p class="text-slate-600 leading-relaxed">
+                Ate 100% of organic chicken pasta bake & steamed carrots. Asked for seconds of sliced peaches! Stayed hydrated with oat milk.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3 p-4 bg-[#fbfcfa] rounded-2xl border border-slate-100 text-xs">
+            <span class="text-2xl">🌱</span>
+            <div class="space-y-2 w-full">
+              <div class="flex justify-between font-bold">
+                <span class="text-slate-900">STEM Discovery Garden</span>
+                <span class="text-slate-400 font-mono">10:15 AM</span>
+              </div>
+              <p class="text-slate-600 leading-relaxed">
+                Leo collaborated with his peers to build a mini waterwheel using pine twigs, birch bark, and river stones in the sensory water run.
+              </p>
+              <div class="rounded-xl overflow-hidden aspect-16/9 border border-slate-200 mt-2">
+                <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=800&q=80" alt="Activity" class="w-full h-full object-cover">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 space-y-6">
+        <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-2xs space-y-4">
+          <div class="flex items-center gap-2.5 border-b border-slate-100 pb-3">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="Teacher" class="w-10 h-10 rounded-full object-cover">
+            <div>
+              <h4 class="font-bold text-xs text-slate-900">Ms. Sarah Jenkins, M.Ed.</h4>
+              <span class="text-[10px] text-emerald-600 font-bold">Online • Pre-K Lead</span>
+            </div>
+          </div>
+          <div class="bg-[#f8fcfa] p-3 rounded-2xl border border-slate-100 text-xs text-slate-700 italic">
+            "Hi Eleanor! Leo loved our science experiment today and made a great friend helping pass out goggles. 😊"
+          </div>
+        </div>
+
+        <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-2xs space-y-3">
+          <h4 class="font-bold text-sm text-slate-900 font-display">Upcoming Dates & Reminders</h4>
+          <div class="space-y-2 text-xs">
+            <div class="p-3 bg-[#fbfcfa] rounded-2xl border border-slate-100 flex justify-between items-center">
+              <div><strong class="block text-slate-900">Pumpkin Patch Field Trip</strong><span class="text-slate-500">Friday, Oct 27 • 9:00 AM</span></div>
+              <span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-bold">Signed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: MESSAGES -->
+    <div id="tab-messages" class="dash-tab-panel hidden bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-2xs max-w-3xl mx-auto space-y-6">
+      <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+        <div class="flex items-center gap-3">
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="Ms. Sarah Jenkins" class="w-12 h-12 rounded-full object-cover border-2 border-[#006747]">
+          <div>
+            <h3 class="font-bold text-sm text-slate-900">Ms. Sarah Jenkins, M.Ed.</h3>
+            <span class="text-xs text-emerald-600 font-semibold">Active Now • Pre-K Classroom</span>
+          </div>
+        </div>
+        <span class="text-xs text-slate-400 font-mono">Room: Meadowlark</span>
+      </div>
+
+      <div id="dash-chat-messages" class="space-y-3 min-h-64 max-h-96 overflow-y-auto pr-2">
+        <div class="p-4 rounded-2xl text-xs space-y-1 max-w-lg bg-[#f4f9f6] text-slate-800 mr-auto border border-slate-100">
+          <div class="flex justify-between text-[10px] opacity-80">
+            <span>Ms. Sarah Jenkins, M.Ed. (Lead Teacher)</span>
+            <span>12:22 PM</span>
+          </div>
+          <p class="leading-relaxed">
+            Hi Eleanor! Leo had a wonderful morning building the waterwheel with his classmates in the STEM garden. He ate all of his organic lunch today! 😊
+          </p>
+        </div>
+      </div>
+
+      <form id="dash-chat-form" class="relative pt-2 border-t border-slate-100">
+        <input id="dash-chat-input" type="text" placeholder="Type message from user..." class="w-full pl-4 pr-12 py-3 rounded-full border border-slate-200 text-xs focus:outline-none focus:border-[#006747]">
+        <button type="submit" class="absolute right-2 top-4 p-2 rounded-full bg-[#006747] text-white hover:bg-[#005238] transition cursor-pointer">
+          <i data-lucide="send" class="w-4 h-4"></i>
+        </button>
+      </form>
+    </div>
+
+    <!-- TAB 3: PHOTOS -->
+    <div id="tab-photos" class="dash-tab-panel hidden space-y-6">
+      <div class="flex items-center justify-between">
+        <div>
+          <h3 class="text-xl font-bold text-slate-900 font-display">Classroom Photo Gallery</h3>
+          <p class="text-xs text-slate-500">12 High-resolution photos shared by lead educators this week</p>
+        </div>
+        <button class="px-4 py-2 rounded-full bg-[#006747] text-white text-xs font-bold shadow-xs">
+          Download All Photos (Zip)
+        </button>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="rounded-2xl overflow-hidden aspect-square border border-slate-200 shadow-2xs">
+          <img src="https://images.unsplash.com/photo-1544126592-807ade215a0b?auto=format&fit=crop&w=500&q=80" alt="Memory" class="w-full h-full object-cover">
+        </div>
+        <div class="rounded-2xl overflow-hidden aspect-square border border-slate-200 shadow-2xs">
+          <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=500&q=80" alt="Memory" class="w-full h-full object-cover">
+        </div>
+        <div class="rounded-2xl overflow-hidden aspect-square border border-slate-200 shadow-2xs">
+          <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=500&q=80" alt="Memory" class="w-full h-full object-cover">
+        </div>
+        <div class="rounded-2xl overflow-hidden aspect-square border border-slate-200 shadow-2xs">
+          <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=500&q=80" alt="Memory" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 4: BILLING -->
+    <div id="tab-billing" class="dash-tab-panel hidden bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-2xs max-w-3xl mx-auto space-y-6">
+      <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+        <div>
+          <h3 class="text-xl font-bold text-slate-900 font-display">Tuition & Billing Statements</h3>
+          <p class="text-xs text-slate-500">Registered Account: <span id="dash-billing-email" class="font-mono">eleanor.miller@family.com</span></p>
+        </div>
+        <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold">Auto-Pay Active</span>
+      </div>
+
+      <div class="p-5 bg-[#f8fcfa] rounded-2xl border border-slate-200 flex items-center justify-between">
+        <div>
+          <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400">Current Monthly Statement</span>
+          <div class="text-3xl font-black font-display text-slate-900 mt-0.5">$1,290.00</div>
+          <span class="text-xs text-emerald-700 font-semibold">✓ Paid on October 1, 2026 via Visa •••• 4821</span>
+        </div>
+        <button class="px-4 py-2 rounded-full border border-slate-300 text-xs font-bold text-slate-700 hover:bg-slate-100 transition">
+          Download PDF Receipt
+        </button>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

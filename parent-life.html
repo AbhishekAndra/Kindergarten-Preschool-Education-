@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parent Life & Community | Stackly Academy</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-[#fbfcfa] text-slate-800 antialiased font-sans">
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-2"><span class="text-2xl sm:text-3xl font-black text-[#006747] font-display">Stackly</span></a>
+        <nav class="hidden lg:flex items-center gap-6 xl:gap-8">
+          <a href="index.html" class="text-sm font-semibold text-slate-600 hover:text-slate-900">Home</a>
+          <a href="programs.html" class="text-sm font-semibold text-slate-600 hover:text-slate-900">Programs</a>
+          <a href="curriculum.html" class="text-sm font-semibold text-slate-600 hover:text-slate-900">Curriculum</a>
+          <a href="admissions.html" class="text-sm font-semibold text-slate-600 hover:text-slate-900">Admissions</a>
+          <a href="parent-life.html" class="text-sm font-semibold nav-active">Parent Life</a>
+          <a href="about.html" class="text-sm font-semibold text-slate-600 hover:text-slate-900">About</a>
+        </nav>
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="tel:(555)019-2801" class="p-2.5 rounded-full hover:bg-slate-100 text-slate-700 transition"><i data-lucide="phone" class="w-4 h-4"></i></a>
+          <a id="nav-portal-btn" href="login.html" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold text-slate-700 hover:text-[#006747] bg-white border border-slate-300 transition shadow-2xs"><i data-lucide="lock" class="w-3.5 h-3.5 text-slate-500"></i><span>Parent Portal Login</span></a>
+          <button class="open-tour-btn inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full text-xs font-bold bg-[#006747] hover:bg-[#005238] text-white shadow-sm transition"><i data-lucide="calendar" class="w-3.5 h-3.5"></i><span>Book a Tour</span></button>
+        </div>
+        <div class="flex items-center gap-2 lg:hidden"><button id="mobile-menu-btn" class="p-2 rounded-xl text-slate-700"><i data-lucide="menu" class="w-6 h-6"></i></button></div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-3 pb-6 shadow-xl">
+      <div class="flex flex-col space-y-1">
+        <a href="index.html" class="px-4 py-3 rounded-xl font-bold text-sm text-slate-700">Home</a>
+        <a href="programs.html" class="px-4 py-3 rounded-xl font-bold text-sm text-slate-700">Programs</a>
+        <a href="curriculum.html" class="px-4 py-3 rounded-xl font-bold text-sm text-slate-700">Curriculum</a>
+        <a href="admissions.html" class="px-4 py-3 rounded-xl font-bold text-sm text-slate-700">Admissions</a>
+        <a href="parent-life.html" class="px-4 py-3 rounded-xl font-bold text-sm bg-emerald-50 text-[#006747]">Parent Life</a>
+        <a href="about.html" class="px-4 py-3 rounded-xl font-bold text-sm text-slate-700">About</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-[#006747] text-xs font-bold mb-4">
+      <span>Family Partnership & Daily Communication</span>
+    </div>
+    <h1 class="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight font-display max-w-3xl mx-auto">
+      Parent Life at Little Sprouts: <span class="text-[#006747]">Connected & Informed</span>
+    </h1>
+    <p class="text-xs sm:text-sm text-slate-600 max-w-2xl mx-auto mt-3">
+      Real-time classroom updates, direct messaging with lead teachers, farm-to-table lunch menus, and community events.
+    </p>
+  </section>
+
+  <!-- QUICK CONTACTS BAR -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+    <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs flex flex-wrap items-center justify-between gap-4 text-xs">
+      <div class="flex items-center gap-2 text-slate-600">
+        <i data-lucide="shield-check" class="w-4 h-4 text-[#006747]"></i>
+        <span>Quick Campus Contacts:</span>
+      </div>
+      <div class="flex flex-wrap items-center gap-4 font-semibold text-slate-700">
+        <span>Lead Teacher (Ms. Sarah): <strong class="text-[#006747]">(555) 019-2801</strong></span>
+        <span>Nurse Station: <strong class="text-[#006747]">(555) 019-2809</strong></span>
+        <span>Main Office: <strong class="text-[#006747]">(555) 019-2800</strong></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- DEMO PARENT STREAM PREVIEW -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <!-- Live Feed -->
+      <div class="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-2xs space-y-6">
+        <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+          <div>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-[#006747]">Today's Live Stream</span>
+            <h3 class="text-xl font-bold text-slate-900 font-display">Meadowlark Room (Pre-K)</h3>
+          </div>
+          <a href="login.html" class="px-4 py-1.5 rounded-full bg-[#006747] text-white text-xs font-bold">Open Full Portal</a>
+        </div>
+
+        <div class="space-y-4">
+          <div class="flex items-start gap-3 p-4 bg-[#fbfcfa] rounded-2xl border border-slate-100 text-xs">
+            <span class="text-2xl">🍲</span>
+            <div class="space-y-1">
+              <div class="flex justify-between font-bold text-slate-900"><span>Family-Style Organic Lunch</span><span class="text-slate-400 font-mono">11:40 AM</span></div>
+              <p class="text-slate-600">Children served each other organic roasted chicken pasta, sweet peas, and fresh peaches. Practiced table manners!</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3 p-4 bg-[#fbfcfa] rounded-2xl border border-slate-100 text-xs">
+            <span class="text-2xl">🌱</span>
+            <div class="space-y-2">
+              <div class="flex justify-between font-bold text-slate-900"><span>STEM Discovery Garden Waterwheel</span><span class="text-slate-400 font-mono">10:15 AM</span></div>
+              <p class="text-slate-600">Constructed miniature flow waterwheels using pine bark and river stones to observe hydraulic energy.</p>
+              <div class="rounded-xl overflow-hidden aspect-16/9 border border-slate-200">
+                <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=700&q=80" alt="Activity" class="w-full h-full object-cover">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Events & Teacher Message -->
+      <div class="lg:col-span-5 space-y-6">
+        <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-2xs space-y-4">
+          <div class="flex items-center gap-3 border-b border-slate-100 pb-3">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="Ms. Sarah" class="w-10 h-10 rounded-full object-cover">
+            <div>
+              <h4 class="font-bold text-xs text-slate-900">Ms. Sarah Jenkins, M.Ed.</h4>
+              <span class="text-[10px] text-emerald-600 font-bold">Online • Lead Room Educator</span>
+            </div>
+          </div>
+          <div class="bg-[#f8fcfa] p-3 rounded-2xl text-xs text-slate-700 italic border border-slate-100">
+            "Good afternoon families! Everyone had an amazing morning in the garden. Please check your cubbies today for wet weather boots."
+          </div>
+          <a href="login.html" class="block w-full py-2.5 rounded-full border border-slate-300 hover:border-[#006747] text-slate-700 hover:text-[#006747] text-center text-xs font-bold transition">
+            Sign In to Message Educator
+          </a>
+        </div>
+
+        <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-2xs space-y-3">
+          <h4 class="font-bold text-sm text-slate-900 font-display">Upcoming Campus Dates</h4>
+          <div class="space-y-2 text-xs">
+            <div class="p-3 bg-[#fbfcfa] rounded-2xl border border-slate-100 flex justify-between items-center">
+              <div><strong class="block text-slate-900">Pumpkin Patch Field Trip</strong><span class="text-slate-500">Friday, Oct 27 • Bus leaves 9:00 AM</span></div>
+              <span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-bold">Signed</span>
+            </div>
+            <div class="p-3 bg-[#fbfcfa] rounded-2xl border border-slate-100 flex justify-between items-center">
+              <div><strong class="block text-slate-900">Parent-Teacher Conferences</strong><span class="text-slate-500">Wednesday, Nov 08 • 3:30 PM slot</span></div>
+              <span class="px-2 py-0.5 rounded-full bg-blue-100 text-blue-800 text-[10px] font-bold">Confirmed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#f8fcfa] text-slate-700 pt-16 pb-12 border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-12 border-b border-slate-200">
+        <div class="md:col-span-5 space-y-4">
+          <a href="index.html" class="inline-block"><span class="text-3xl font-black text-[#006747] font-display">Stackly</span></a>
+          <p class="text-xs sm:text-sm text-slate-500 max-w-sm">Cultivating joyful discovery, academic readiness, and emotional security through evidence-based, play-centered early childhood care.</p>
+          <div class="flex items-center gap-2.5 pt-2">
+            <a href="404.html" class="w-9 h-9 rounded-full border border-slate-300 flex items-center justify-center text-slate-700 hover:text-[#006747] bg-white text-xs font-bold shadow-2xs">f</a>
+            <a href="404.html" class="w-9 h-9 rounded-full border border-slate-300 flex items-center justify-center text-slate-700 hover:text-[#006747] bg-white text-xs font-bold shadow-2xs">𝕏</a>
+            <a href="404.html" class="w-9 h-9 rounded-full border border-slate-300 flex items-center justify-center text-slate-700 hover:text-[#006747] bg-white text-[11px] font-bold shadow-2xs">▶</a>
+            <a href="404.html" class="w-9 h-9 rounded-full border border-slate-300 flex items-center justify-center text-slate-700 hover:text-[#006747] bg-white text-xs font-bold shadow-2xs">📷</a>
+          </div>
+          <div class="flex flex-wrap items-center gap-2.5 pt-2">
+            <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#ebfbf3] text-[#006747] text-[11px] font-bold border border-[#b7e1cd]"><i data-lucide="check" class="w-3.5 h-3.5"></i> NAEYC Accredited</span>
+            <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#f0f9ff] text-[#0284c7] text-[11px] font-bold border border-[#bae6fd]"><i data-lucide="check" class="w-3.5 h-3.5"></i> State Licensed</span>
+          </div>
+        </div>
+        <div class="md:col-span-1"></div>
+        <div class="md:col-span-3">
+          <h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider mb-4 font-display">Programs & Resources</h4>
+          <ul class="space-y-2.5 text-xs text-slate-600 font-medium">
+            <li><a href="programs.html" class="hover:text-[#006747]">Programs & Care</a></li>
+            <li><a href="admissions.html" class="hover:text-[#006747]">Admissions & Tuition</a></li>
+            <li><a href="parent-life.html" class="hover:text-[#006747]">Parent Handbook</a></li>
+            <li><a href="curriculum.html" class="hover:text-[#006747]">Daily Rhythms</a></li>
+          </ul>
+        </div>
+        <div class="md:col-span-3">
+          <h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider mb-4 font-display">Safety & Accreditation</h4>
+          <ul class="space-y-2.5 text-xs text-slate-600 font-medium">
+            <li><a href="about.html" class="hover:text-[#006747]">Emergency Protocols</a></li>
+            <li><a href="about.html" class="hover:text-[#006747]">Licensing & Accreditations</a></li>
+            <li><a href="about.html" class="hover:text-[#006747]">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <p>© 2024 Little Sprouts Academy. NAEYC Accredited & State Licensed Early Childhood Education Center. All rights reserved.</p>
+        <div class="flex items-center gap-6">
+          <span>Security Standards</span>
+          <span>Accessibility</span>
+          <a href="login.html" class="hover:text-[#006747] font-semibold">Staff Login</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div id="tour-modal" class="modal-backdrop modal-hidden">
+    <div class="bg-white rounded-3xl p-6 sm:p-8 max-w-lg w-full border border-slate-200 shadow-2xl space-y-4 animate-fadeIn relative">
+      <button id="close-tour-btn" class="absolute right-4 top-4 p-1.5 rounded-full hover:bg-slate-100 text-slate-400 hover:text-slate-700"><i data-lucide="x" class="w-5 h-5"></i></button>
+      <div><h3 class="text-2xl font-black text-slate-900 font-display">Schedule Your Campus Tour</h3><p class="text-xs text-slate-500 mt-1">Join an intimate 30-minute classroom walk through.</p></div>
+      <form id="tour-form" class="space-y-3 pt-2">
+        <div><label class="block text-xs font-bold text-slate-700 mb-1">Parent Name</label><input type="text" required placeholder="Eleanor Miller" class="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs"></div>
+        <div class="grid grid-cols-2 gap-3">
+          <div><label class="block text-xs font-bold text-slate-700 mb-1">Email</label><input type="email" required placeholder="parent@family.com" class="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs"></div>
+          <div><label class="block text-xs font-bold text-slate-700 mb-1">Phone</label><input type="tel" required placeholder="(555) 019-2810" class="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs"></div>
+        </div>
+        <button type="submit" class="w-full py-3 rounded-full bg-[#006747] hover:bg-[#005238] text-white font-bold text-xs mt-2">Confirm Tour Booking</button>
+      </form>
+      <div id="tour-success" class="hidden text-center py-6 space-y-3">
+        <div class="w-12 h-12 bg-emerald-100 text-[#006747] rounded-full flex items-center justify-center mx-auto"><i data-lucide="check" class="w-6 h-6"></i></div>
+        <h4 class="text-lg font-bold text-slate-900">Tour Confirmed!</h4>
+        <button onclick="window.closeTourModal()" class="px-5 py-2 rounded-full bg-[#006747] text-white font-bold text-xs">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
